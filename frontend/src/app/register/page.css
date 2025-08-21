@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input {
+  @apply w-full p-3 border border-gray-300 rounded-lg bg-transparent;
+}
+
+.file-input {
+  @apply w-full p-2 border rounded-md bg-white/10;
+}
+
+.preview-img {
+  @apply mt-2 h-24 w-24 object-cover rounded-md shadow;
+}
