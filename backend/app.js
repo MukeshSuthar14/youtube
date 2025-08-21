@@ -8,6 +8,9 @@ const fileUpload = require('express-fileupload');
 const fs = require("fs");
 
 // required task
+if (!fs.existsSync(path.join(__dirname, "storage"))) {
+    fs.mkdirSync(path.join(__dirname, "storage"));
+}
 const createFolder = ["thumbnails", "videos", "banners", "images"];
 for (var folder of createFolder) {
     if (!fs.existsSync(path.join(__dirname, "storage", folder))) {
