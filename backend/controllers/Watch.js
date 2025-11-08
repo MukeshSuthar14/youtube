@@ -293,7 +293,7 @@ class Watch {
             const videos = await Video.find({ deleted: false, visibility: "public" }).populate('uploader').limit(20);
             response.status(200).json({
                 status: true,
-                videos: videos && videos.map(video => ({
+                videos: videos && videos.length > 0 && videos.map(video => ({
                     slug: video?.slug,
                     videoPlay: false,
                     title: video?.title,
