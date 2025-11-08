@@ -200,7 +200,7 @@ class Login {
             history: [],
             watchLater: [],
             likedVideo: [],
-            videos: videos.map(video => ({
+            videos: videos && videos.map(video => ({
                 title: video.title
             }))
         });
